@@ -1,0 +1,17 @@
+name: rover
+channels:
+  - conda-forge
+  - nodefaults
+dependencies:
+  - python=3.11
+  - rust
+  - coin-or-cbc
+  - yosys
+  - iverilog
+  - pip
+  - pytest
+  - pip:
+      - pulp==3.3.0
+      - z3-solver==4.15.4.0
+      - pyslang==9.1.0
+      - -e .

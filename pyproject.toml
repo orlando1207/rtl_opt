@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rover-rtl"
+version = "0.1.0"
+description = "Reconstruction of ROVER's verified RTL rewriting and DAG ILP extraction"
+requires-python = ">=3.11"
+dependencies = ["pulp==3.3.0", "z3-solver==4.15.4.0", "pyslang==9.1.0"]
+
+[project.scripts]
+rover = "rover.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["rover*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
